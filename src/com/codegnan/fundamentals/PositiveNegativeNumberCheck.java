@@ -1,3 +1,4 @@
+
 package com.codegnan.fundamentals;
 
 import java.util.Scanner;
