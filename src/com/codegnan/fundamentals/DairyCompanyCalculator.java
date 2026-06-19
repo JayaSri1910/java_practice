@@ -9,9 +9,9 @@ public class DairyCompanyCalculator {
 		double mixture=sc.nextDouble();
 		double finalmilkratio=sc.nextDouble();
 		double finalwaterratio=sc.nextInt();
-		double initialmilkfraction=(double)initialmilkratio/(initialwaterratio*initialmilkratio);
-		double finalmilkfraction=(double)finalmilkratio/(finalwaterratio*finalmilkratio);
-		double capacity=mixture/(1-(finalmilkfraction/initialmilkfraction));
+		double initialmilkfraction=(double)initialmilkratio/(initialwaterratio+initialmilkratio);
+		double finalmilkfraction=(double)finalmilkratio/(finalwaterratio+finalmilkratio);
+		double capacity=(initialmilkfraction * mixture)/(initialmilkfraction-finalmilkfraction);
 		System.out.println("Container capacity:"+(int)capacity+"litres");
 
 	}
